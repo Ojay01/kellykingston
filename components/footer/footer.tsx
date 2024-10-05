@@ -19,7 +19,7 @@ const Footer = () => {
             </Link>
           </div>
           <div className="flex flex-col items-center md:items-end">
-            <p className="text-lg font-semibold mb-2 text-purple-400">Let's Connect</p>
+            <p className="text-lg font-semibold mb-2 text-purple-400">{"Let's Connect"}</p>
             <div className="flex space-x-4">
               <a href="https://www.linkedin.com/in/ojong-kelly-kingston-12569522b/" aria-label="LinkedIn profile" className="hover:text-purple-400 transition-colors">
                 <FontAwesomeIcon icon={faLinkedin} className="w-6 h-6" />

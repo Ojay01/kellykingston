@@ -3,12 +3,7 @@ import React, { useState, useEffect } from "react";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faBars,
-  faTimes,
-  faDownload,
-  faEnvelope,
-} from "@fortawesome/free-solid-svg-icons";
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 
 // Prevent Font Awesome from adding its CSS since we did it manually above
@@ -62,7 +57,7 @@ const Header = () => {
           </a>
         </div>
         <button className="hidden md:block bg-purple-600 text-white px-4 py-2 rounded-full hover:bg-purple-700 transition-colors">
-          Let's Talk
+         {" Let's Talk"}
         </button>
         <button
           className="md:hidden text-2xl z-50"
@@ -122,7 +117,7 @@ const Header = () => {
             className="mt-4 w-64 bg-purple-600 text-white px-4 py-2 rounded-full hover:bg-purple-700 transition-colors"
             onClick={() => setMobileMenuOpen(false)}
           >
-            Let's Talk
+            {"Let's Talk"}
           </button>
         </div>
       </div>
