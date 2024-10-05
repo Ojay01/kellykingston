@@ -6,7 +6,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 
-// Prevent Font Awesome from adding its CSS since we did it manually above
 config.autoAddCss = false;
 
 const Header = () => {
@@ -26,7 +25,7 @@ const Header = () => {
 
   return (
     <div
-      className={`bg-gradient-to-br from-[#1a1a2e] to-[#2a0e3a] text-white font-sans ${
+      className={`sticky top-0 z-40 bg-gradient-to-br from-[#1a1a2e] to-[#2a0e3a] text-white font-sans ${
         mobileMenuOpen ? "h-screen overflow-hidden" : ""
       }`}
     >
@@ -36,7 +35,7 @@ const Header = () => {
             <span>K</span>
           </div>
           <span className="font-semibold group-hover:text-purple-400 transition-colors">
-            kellykiings.design
+            kellykings.design
           </span>
         </Link>
         <div className="hidden md:flex space-x-6">

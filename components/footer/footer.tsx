@@ -19,7 +19,7 @@ const Footer = () => {
           transform: "translateY(1px)",
         }}
       ></div>
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 py-4 md:px-16">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <Link href="/" className="group">
@@ -38,6 +38,8 @@ const Footer = () => {
             <div className="flex space-x-4">
               <a
                 href="https://www.linkedin.com/in/ojong-kelly-kingston-12569522b/"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="LinkedIn profile"
                 className="hover:text-purple-400 transition-colors"
               >
@@ -45,6 +47,8 @@ const Footer = () => {
               </a>
               <a
                 href="https://github.com/Ojay01"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="GitHub profile"
                 className="hover:text-purple-400 transition-colors"
               >
@@ -52,6 +56,8 @@ const Footer = () => {
               </a>
               <a
                 href="https://x.com/OjKellyKingston"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="X (formerly Twitter) profile"
                 className="hover:text-purple-400 transition-colors"
               >
@@ -59,6 +65,8 @@ const Footer = () => {
               </a>
               <a
                 href="https://www.instagram.com/ojongab/"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Instagram profile"
                 className="hover:text-purple-400 transition-colors"
               >
@@ -66,6 +74,8 @@ const Footer = () => {
               </a>
               <a
                 href="https://wa.me/+237673909858"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="WhatsApp contact"
                 className="hover:text-purple-400 transition-colors"
               >

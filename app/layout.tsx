@@ -17,8 +17,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Gerold - Web Developer & UX Designer",
-  description: "Portfolio of Gerold, Web Developer and UX Designer",
+  title: "Kelly Kingston - Full Stack Developer",
+  description: "Portfolio of Kelly Kingston, Full Stack Web Developer",
 };
 
 export default function RootLayout({
@@ -33,7 +33,7 @@ export default function RootLayout({
       >
         <Header />
         <main className="flex-1 overflow-auto">
-          <div className="min-h-full flex items-center justify-center py-12 px-4">
+          <div className="min-h-full   py-12 px-4">
             {children}
             <Analytics />
           </div>
