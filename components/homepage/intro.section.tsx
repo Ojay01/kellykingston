@@ -14,7 +14,7 @@ import CountUp from "react-countup";
 
 const Intro = () => {
   return (
-    <section className="">
+    <section className="py-8">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center px-4 md:px-16">
         <div className="max-w-2xl mb-8 md:mb-0">
           <h1 className="text-3xl md:text-7xl font-bold mb-4">
@@ -115,7 +115,7 @@ const Intro = () => {
               />
             </a>
             <a
-              href="https://www.discord.com/kelly.kingston"
+              href="https://discord.com/channels/@me/1184058374720073790"
               target="_blank"
               rel="noopener noreferrer"
             >

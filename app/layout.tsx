@@ -33,7 +33,7 @@ export default function RootLayout({
       >
         <Header />
         <main className="flex-1 overflow-auto">
-          <div className="min-h-full   py-12 px-4">
+          <div className="min-h-full">
             {children}
             <Analytics />
           </div>
