@@ -57,7 +57,7 @@ const Header = () => {
           </a>
         </div>
         <button className="hidden md:block bg-purple-600 text-white px-4 py-2 rounded-full hover:bg-purple-700 transition-colors">
-         {" Let's Talk"}
+          {" Let's Talk"}
         </button>
         <button
           className="md:hidden text-2xl z-50"

@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
+import { Analytics } from "@vercel/analytics/react";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -34,6 +35,7 @@ export default function RootLayout({
         <main className="flex-1 overflow-auto">
           <div className="min-h-full flex items-center justify-center py-12 px-4">
             {children}
+            <Analytics />
           </div>
         </main>
         <Footer />

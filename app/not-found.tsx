@@ -1,5 +1,5 @@
-import Link from 'next/link'
-import Image from 'next/image'
+import Link from "next/link";
+import Image from "next/image";
 
 export default function NotFound() {
   return (
@@ -13,11 +13,18 @@ export default function NotFound() {
           className="mx-auto"
         />
       </div>
-      <h1 className="text-4xl sm:text-5xl font-bold mb-4">404 - Page Not Found</h1>
-      <p className="text-lg sm:text-xl mb-8 max-w-md mx-auto">{"Oops! The page you're looking for doesn't exist."}</p>
-      <Link href="/" className="bg-purple-600 text-white px-6 py-3 rounded-full hover:bg-purple-700 transition-duration-300">
+      <h1 className="text-4xl sm:text-5xl font-bold mb-4">
+        404 - Page Not Found
+      </h1>
+      <p className="text-lg sm:text-xl mb-8 max-w-md mx-auto">
+        {"Oops! The page you're looking for doesn't exist."}
+      </p>
+      <Link
+        href="/"
+        className="bg-purple-600 text-white px-6 py-3 rounded-full hover:bg-purple-700 transition-duration-300"
+      >
         Go back home
       </Link>
     </div>
-  )
+  );
 }
