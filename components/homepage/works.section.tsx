@@ -44,7 +44,7 @@ const works: WorkItem[] = [
 
 const RecentWorksSection: React.FC = () => {
   const [filter, setFilter] = useState("All");
-  const categories = ["All", "Web Design", "Mobile App", "UI/UX"];
+  const categories = ["All", "Web Design", "Mobile App", "Destop App"];
 
   const filteredWorks =
     filter === "All" ? works : works.filter((work) => work.category === filter);
