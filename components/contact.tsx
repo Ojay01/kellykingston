@@ -46,15 +46,15 @@ const ContactMePage: React.FC = () => {
         "Thanks for reaching out. I would get back to you shortly !",
       );
       setFormData({ name: "", email: "", message: "" });
-    } catch (error: string | any) {
+    } catch (error: any) {
       if (error.status === 412) {
         toast.error(
           "There's an issue with the email service. Please try again later or contact the site administrator.",
         );
+      } else if (error.text) {
+        toast.error(error.text);
       } else {
-        toast.error(
-          error.text || "Failed to send message. Please try again later.",
-        );
+        toast.error("Failed to send message. Please try again later.");
       }
     } finally {
       setIsSubmitting(false);
