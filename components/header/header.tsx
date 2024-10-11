@@ -48,16 +48,16 @@ const Header = () => {
           <a href="#" className="hover:text-purple-400">
             Clients
           </a>
-          <a href="#" className="hover:text-purple-400">
-            Blog
-          </a>
-          <a href="#" className="hover:text-purple-400">
+          <Link href="/contact" className="hover:text-purple-400">
+            {" "}
             Contact
-          </a>
+          </Link>
         </div>
-        <button className="hidden md:block bg-purple-600 text-white px-4 py-2 rounded-full hover:bg-purple-700 transition-colors">
-          {" Let's Talk"}
-        </button>
+        <Link href="/talk">
+          <button className="hidden md:block bg-purple-600 text-white px-4 py-2 rounded-full hover:bg-purple-700 transition-colors">
+            {" Let's Talk"}
+          </button>
+        </Link>
         <button
           className="md:hidden text-2xl z-50"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -98,26 +98,21 @@ const Header = () => {
           >
             Clients
           </a>
-          <a
-            href="#"
-            className="text-2xl hover:text-purple-400"
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            Blog
-          </a>
-          <a
-            href="#"
+          <Link
+            href="/contact"
             className="text-2xl hover:text-purple-400"
             onClick={() => setMobileMenuOpen(false)}
           >
             Contact
-          </a>
-          <button
-            className="mt-4 w-64 bg-purple-600 text-white px-4 py-2 rounded-full hover:bg-purple-700 transition-colors"
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            {"Let's Talk"}
-          </button>
+          </Link>
+          <Link href="/talk">
+            <button
+              className="mt-4 w-64 bg-purple-600 text-white px-4 py-2 rounded-full hover:bg-purple-700 transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {"Let's Talk"}
+            </button>
+          </Link>
         </div>
       </div>
     </div>
