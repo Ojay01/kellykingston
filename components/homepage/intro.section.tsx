@@ -17,6 +17,7 @@ import {
 import CountUp from "react-countup";
 import toast, { Toaster } from "react-hot-toast";
 import { useState } from "react";
+import Image from "next/image";
 
 const Intro = () => {
   const [isDownloading, setIsDownloading] = useState(false);
@@ -195,9 +196,11 @@ const Intro = () => {
               </a>
             </div>
           </div>
+
+
           <div className="relative w-64 h-80 md:w-80 md:h-96 transform rotate-6 transition-transform hover:rotate-0 duration-300">
             <div className="absolute inset-0 bg-gradient-to-br from-purple-600 to-blue-500 rounded-lg shadow-xl"></div>
-            <img
+            <Image
               src="/me.jpeg"
               alt="Gerold"
               className="absolute inset-0 w-full h-full object-cover rounded-lg mix-blend-overlay"

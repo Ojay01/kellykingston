@@ -35,7 +35,7 @@ const ContactMePage: React.FC = () => {
     setIsSubmitting(true);
 
     try {
-      const result = await emailjs.send(
+      await emailjs.send(
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
         {
@@ -51,7 +51,6 @@ const ContactMePage: React.FC = () => {
       );
       setFormData({ name: "", email: "", message: "" });
     } catch (error: any) {
-      console.error("Failed to send email:", error);
       if (error.status === 412) {
         toast.error(
           "There's an issue with the email service. Please try again later or contact the site administrator.",
