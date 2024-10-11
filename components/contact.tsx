@@ -35,22 +35,18 @@ const ContactMePage: React.FC = () => {
     setIsSubmitting(true);
 
     try {
-      await emailjs.send(
-        EMAILJS_SERVICE_ID,
-        EMAILJS_TEMPLATE_ID,
-        {
-          from_name: formData.name,
-          from_email: formData.email,
-          message: formData.message,
-          to_email: ADMIN_EMAIL,
-        },
-      );
+      await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+        to_email: ADMIN_EMAIL,
+      });
 
       toast.success(
         "Thanks for reaching out. I would get back to you shortly !",
       );
       setFormData({ name: "", email: "", message: "" });
-    } catch (error: any) {
+    } catch (error: string | any) {
       if (error.status === 412) {
         toast.error(
           "There's an issue with the email service. Please try again later or contact the site administrator.",

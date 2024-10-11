@@ -32,11 +32,11 @@ const LetsTalkPage: React.FC = () => {
     <section className="py-20">
       <div className="container mx-auto px-4">
         <h2 className="text-white text-3xl font-bold mb-8 text-center">
-          Let's Talk
+          Let&apos;s Talk
         </h2>
         <div className="max-w-3xl mx-auto bg-gray-800 rounded-lg p-8">
           <p className="text-gray-300 mb-8 text-center">
-            I'm always open to discussing new projects, creative ideas or
+            I&apos;m always open to discussing new projects, creative ideas or
             opportunities to be part of your visions.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
