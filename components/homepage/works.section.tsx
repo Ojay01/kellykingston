@@ -14,37 +14,37 @@ interface WorkItem {
 const works: WorkItem[] = [
   {
     id: "1",
-    title: "Nebula",
-    category: "Web Design",
+    title: "Drives EXpress",
+    category: "Web App",
     image: "/placeholder-1.jpg",
-    link: "/works/nebula",
+    link: "https://drivesexpress.com",
   },
   {
     id: "2",
-    title: "Drive Tour",
-    category: "Mobile App",
+    title: "Amene Academy",
+    category: "Web App",
     image: "/placeholder-2.jpg",
-    link: "/works/drive-tour",
+    link: "https://ameneacademy.com",
   },
   {
     id: "3",
-    title: "Sebastian Gaming",
-    category: "Mobile App",
-    image: "/placeholder-3.jpg",
-    link: "/works/sebastian-gaming",
+    title: "Cohas Bepanda",
+    category: "Web App",
+    image: "/img/cohas.png",
+    link: "https://new.cohasbepanda.com",
   },
   {
     id: "4",
-    title: "Roger Dolder",
-    category: "Web Design",
-    image: "/placeholder-4.jpg",
-    link: "/works/roger-dolder",
+    title: "Student Fees Management System",
+    category: "Desktop App",
+    image: "/img/desktop1.jpeg",
+    link: "#",
   },
 ];
 
 const RecentWorksSection: React.FC = () => {
   const [filter, setFilter] = useState("All");
-  const categories = ["All", "Web Design", "Mobile App", "Destop App"];
+  const categories = ["All", "Web App", "Mobile App", "Desktop App"];
 
   const filteredWorks =
     filter === "All" ? works : works.filter((work) => work.category === filter);
@@ -74,14 +74,19 @@ const RecentWorksSection: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {filteredWorks.map((work) => (
-            <Link href={work.link} key={work.id} className="group">
+            <Link
+              href={work.link}
+              key={work.id}
+              className="group"
+              target="_blank"
+            >
               <div className="bg-gray-800 rounded-lg overflow-hidden">
                 <div className="relative h-64">
                   <Image
                     src={work.image}
                     alt={work.title}
                     layout="fill"
-                    objectFit="cover"
+                    // objectFit="cover"
                     className="group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>

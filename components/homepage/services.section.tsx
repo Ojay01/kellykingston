@@ -23,7 +23,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   learnMoreUrl,
 }) => (
   <div className="bg-gray-800 rounded-lg p-6 flex flex-col items-start hover:bg-gray-700 transition-colors duration-300">
-    <div className="flex flex-row gap-4">
+    <div className="flex items-center flex-row gap-4">
       <FontAwesomeIcon icon={icon} className="text-purple-500 mb-4" size="2x" />
       <h3 className="text-white text-xl font-semibold mb-2">{title}</h3>
     </div>
