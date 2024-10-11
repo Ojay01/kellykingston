@@ -28,7 +28,7 @@ const works: WorkItem[] = [
   },
   {
     id: "3",
-    title: "Cohas Bepanda",
+    title: "Student management system",
     category: "Web App",
     image: "/img/cohas.png",
     link: "https://new.cohasbepanda.com",
@@ -50,7 +50,7 @@ const RecentWorksSection: React.FC = () => {
     filter === "All" ? works : works.filter((work) => work.category === filter);
 
   return (
-    <section className="bg-gray-900 py-20">
+    <section className=" py-20">
       <div className="container mx-auto px-4">
         <h2 className="text-white text-3xl font-bold mb-8 text-center">
           My Recent Works
