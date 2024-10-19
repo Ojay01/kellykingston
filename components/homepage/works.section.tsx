@@ -50,8 +50,8 @@ const RecentWorksSection: React.FC = () => {
     filter === "All" ? works : works.filter((work) => work.category === filter);
 
   return (
-    <section className=" py-20">
-      <div className="container mx-auto px-4">
+    <section className="py-20">
+      <div className="container mx-auto px-4 md:px-16">
         <h2 className="text-white text-3xl font-bold mb-8 text-center">
           My Recent Works
         </h2>
@@ -72,34 +72,43 @@ const RecentWorksSection: React.FC = () => {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {filteredWorks.map((work) => (
-            <Link
-              href={work.link}
-              key={work.id}
-              className="group"
-              target="_blank"
-            >
-              <div className="bg-gray-800 rounded-lg overflow-hidden">
-                <div className="relative h-64">
-                  <Image
-                    src={work.image}
-                    alt={work.title}
-                    layout="fill"
-                    // objectFit="cover"
-                    className="group-hover:scale-105 transition-transform duration-300"
-                  />
+        {filteredWorks.length > 0 ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {filteredWorks.map((work) => (
+              <Link
+                href={work.link}
+                key={work.id}
+                className="group"
+                target="_blank"
+              >
+                <div className="bg-gray-800 rounded-lg overflow-hidden">
+                  <div className="relative h-64">
+                    <Image
+                      src={work.image}
+                      alt={work.title}
+                      layout="fill"
+                      className="group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-white text-xl font-semibold mb-2">
+                      {work.title}
+                    </h3>
+                    <p className="text-gray-400">{work.category}</p>
+                  </div>
                 </div>
-                <div className="p-6">
-                  <h3 className="text-white text-xl font-semibold mb-2">
-                    {work.title}
-                  </h3>
-                  <p className="text-gray-400">{work.category}</p>
-                </div>
-              </div>
-            </Link>
-          ))}
-        </div>
+              </Link>
+            ))}
+          </div>
+        ) : (
+          <div className="text-center py-20">
+            <p className="text-white text-xl">
+              {filter === "Mobile App"
+                ? "Mobile app projects coming soon! Currently learning Dart and Flutter."
+                : "No projects to display for this category."}
+            </p>
+          </div>
+        )}
       </div>
     </section>
   );

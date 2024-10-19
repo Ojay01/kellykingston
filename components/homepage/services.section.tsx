@@ -65,7 +65,7 @@ const ServicesSection: React.FC = () => {
 
   return (
     <section className="bg-gray-900 py-20">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 md:px-16">
         <h2 className="text-white text-3xl font-bold mb-12 text-center">
           My Quality Services
         </h2>
