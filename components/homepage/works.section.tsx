@@ -23,7 +23,7 @@ const works: WorkItem[] = [
     id: "2",
     title: "Amene Academy",
     category: "Web App",
-    image: "/placeholder-2.jpg",
+    image: "/img/amene.png",
     link: "https://ameneacademy.com",
   },
   {
