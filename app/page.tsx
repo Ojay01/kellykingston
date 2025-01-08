@@ -1,4 +1,4 @@
-// import ClientFeedbackSection from "@/components/homepage/clientsFeedback.section";
+import ClientFeedbackSection from "@/components/homepage/clientsFeedback.section";
 import EducationSection from "@/components/homepage/education.section";
 import ExperienceSection from "@/components/homepage/experiences.section";
 import Intro from "@/components/homepage/intro.section";
@@ -13,7 +13,7 @@ export default function Home() {
       <RecentWorksSection />
       <EducationSection />
       <ExperienceSection />
-      {/* <ClientFeedbackSection /> */}
+      <ClientFeedbackSection />
     </main>
   );
 }

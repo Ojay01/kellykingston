@@ -16,7 +16,7 @@ const works: WorkItem[] = [
     id: "1",
     title: "Drives EXpress",
     category: "Web App",
-    image: "/placeholder-1.jpg",
+    image: "/img/drive.png",
     link: "https://drivesexpress.com",
   },
   {
@@ -40,12 +40,18 @@ const works: WorkItem[] = [
     image: "/img/desktop1.jpeg",
     link: "#",
   },
+  {
+    id: "5",
+    title: "Customized gift shop",
+    category: "Wep App",
+    image: "/img/zinel.png",
+    link: "https://zinelgifts.com",
+  },
 ];
 
 const RecentWorksSection: React.FC = () => {
   const [filter, setFilter] = useState("All");
   const categories = ["All", "Web App", "Mobile App", "Desktop App"];
-
   const filteredWorks =
     filter === "All" ? works : works.filter((work) => work.category === filter);
 
@@ -55,46 +61,47 @@ const RecentWorksSection: React.FC = () => {
         <h2 className="text-white text-3xl font-bold mb-8 text-center">
           My Recent Works
         </h2>
-
-        <div className="flex justify-center mb-8">
+        <div className="flex justify-center mb-8 space-x-4">
           {categories.map((category) => (
             <button
               key={category}
               onClick={() => setFilter(category)}
-              className={`mx-2 px-4 py-2 rounded-full ${
+              className={`px-4 py-2 rounded-full transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-500/20 ${
                 filter === category
-                  ? "bg-purple-600 text-white"
-                  : "bg-gray-800 text-gray-300"
+                  ? "bg-purple-600 text-white transform scale-105"
+                  : "bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white"
               }`}
             >
               {category}
             </button>
           ))}
         </div>
-
         {filteredWorks.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {filteredWorks.map((work) => (
               <Link
                 href={work.link}
                 key={work.id}
-                className="group"
+                className="group block"
                 target="_blank"
               >
-                <div className="bg-gray-800 rounded-lg overflow-hidden">
-                  <div className="relative h-64">
+                <div className="bg-gray-800 rounded-lg overflow-hidden transition-all duration-300 ease-in-out transform hover:scale-102 hover:shadow-xl hover:shadow-purple-500/10">
+                  <div className="relative h-64 overflow-hidden">
                     <Image
                       src={work.image}
                       alt={work.title}
                       layout="fill"
-                      className="group-hover:scale-105 transition-transform duration-300"
+                      className="object-cover transition-all duration-500 ease-in-out group-hover:scale-110 group-hover:opacity-90"
                     />
+                    <div className="absolute inset-0 bg-purple-600/0 transition-all duration-300 ease-in-out group-hover:bg-purple-600/20" />
                   </div>
-                  <div className="p-6">
-                    <h3 className="text-white text-xl font-semibold mb-2">
+                  <div className="p-6 transition-all duration-300 ease-in-out group-hover:bg-gray-700">
+                    <h3 className="text-white text-xl font-semibold mb-2 transition-all duration-300 ease-in-out group-hover:text-purple-400">
                       {work.title}
                     </h3>
-                    <p className="text-gray-400">{work.category}</p>
+                    <p className="text-gray-400 transition-all duration-300 ease-in-out group-hover:text-gray-300">
+                      {work.category}
+                    </p>
                   </div>
                 </div>
               </Link>
