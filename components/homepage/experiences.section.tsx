@@ -28,6 +28,12 @@ const ExperienceData: ExperienceProp[] = [
     proficiency: 80,
   },
   {
+    skill: "NextJS",
+    years: 2,
+    level: "Advanced",
+    proficiency: 65,
+  },
+  {
     skill: "Node.js",
     years: 0.3,
     level: "Beginner",
@@ -55,7 +61,7 @@ const ExperienceData: ExperienceProp[] = [
     skill: "MongoDB",
     years: 0.7,
     level: "Beginner",
-    proficiency: 45,
+    proficiency: 30,
   },
   {
     skill: "HTML/CSS",
@@ -97,7 +103,7 @@ const ExperienceData: ExperienceProp[] = [
     skill: "Angular",
     years: 1,
     level: "Intermediate",
-    proficiency: 35,
+    proficiency: 45,
   },
   {
     skill: "Java",
